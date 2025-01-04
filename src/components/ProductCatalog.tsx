@@ -163,7 +163,7 @@ const ProductCatalog: React.FC = () => {
             </div>
           ))
         ) : (
-          <p className={styles.noProductsFound}>No products found</p>
+          <p className={styles.noProductsFound}>No products found.</p>
         )}
       </div>
     </div>
