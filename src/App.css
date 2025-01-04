@@ -1,0 +1,15 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #e0e0e0;
+  background-color: #1a1a1a;
+  min-height: 100vh;
+}
