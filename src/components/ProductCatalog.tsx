@@ -123,6 +123,7 @@ const ProductCatalog: React.FC = () => {
         product.title.toLowerCase().includes(search.toLowerCase()) &&
         (category === "" || product.category === category)
     );
+
     setFilteredProducts(filtered);
   };
 
@@ -149,17 +150,21 @@ const ProductCatalog: React.FC = () => {
         </select>
       </div>
       <div className={styles.productGrid}>
-        {filteredProducts.map((product) => (
-          <div key={product.id} className={styles.productCard}>
-            <img
-              src={product.image}
-              alt={product.title}
-              className={styles.productImage}
-            />
-            <h3 className={styles.productTitle}>{product.title}</h3>
-            <p className={styles.productPrice}>${product.price}</p>
-          </div>
-        ))}
+        {filteredProducts.length > 0 ? (
+          filteredProducts.map((product) => (
+            <div key={product.id} className={styles.productCard}>
+              <img
+                src={product.image}
+                alt={product.title}
+                className={styles.productImage}
+              />
+              <h3 className={styles.productTitle}>{product.title}</h3>
+              <p className={styles.productPrice}>${product.price}</p>
+            </div>
+          ))
+        ) : (
+          <p className={styles.noProductsFound}>No products found</p>
+        )}
       </div>
     </div>
   );
