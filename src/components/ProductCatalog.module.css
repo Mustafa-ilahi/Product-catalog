@@ -117,4 +117,7 @@
   font-size: 1.25rem;
   color: #000;
   margin-top: 20px;
+  grid-column: span 4; 
+  justify-self: center; 
+  align-self: center; 
 }
